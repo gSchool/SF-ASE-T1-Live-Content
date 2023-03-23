@@ -426,3 +426,41 @@ let data = [
     }
 ]
 
+let loadsOfArrays = [
+    [
+        ["apples", "oranges", "lemons", "limes"],
+        ["potato", "carrots", "beans", "lentils"]
+    ],
+    [
+        ["pepsi", "mountain dew", "sprite"],
+        ["coke", "diet coke", "mr. pibb"]
+    ]
+
+]
+let simplerArray = ["apples", "oranges", "lemons", "limes", "potato", "carrots", "beans", "lentils", "pepsi", "mountain dew", "sprite", "coke", "diet coke", "mr. pibb"]
+console.log(loadsOfArrays[0][1][1]);
+
+// Write a function, that checks if a givenItem is in any of the arrays and returns the index of that item.
+
+function findGivenItem(itemArray, givenItem) {
+    for (var i = 0; i < itemArray.length; i++) {
+        for (var j = 0; j < itemArray[i].length; j++) {
+            for (var k = 0; k < itemArray[i][j].length; k++) {
+                if (itemArray[i][j][k].toLowerCase() == givenItem.toLowerCase()) {
+                    return [i, j, k];
+                }
+            }
+        }
+    }
+}
+
+// function findGivenItem2(itemArray, givenItem) {
+//     for (var i = 0; i < itemArray.length; i++) {
+//         if (itemArray[i].toLowerCase() == givenItem.toLowerCase()) {
+//             return i;
+//         }
+//     }
+// }
+
+let output = findGivenItem(loadsOfArrays, "cArRotS");
+console.log(`The item is at index: ${output}`);
