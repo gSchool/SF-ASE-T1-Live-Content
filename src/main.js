@@ -426,101 +426,26 @@ let data = [
     }
 ]
 
-// function refine(num) {
-//     if (num === 5) {
-//         return num
-//     }
-//     num = num + 1;
-//     return refine(num);
-// }
-
-// function aFunction() {
-
-//     let output = refine(3)
-//     return output = output + 1;
-// }
-
-
-// let output = aFunction();
-// console.log(output);
-
-// function isItTruthy(param) {
-//     if (param) {
-//       return 'Input is truthy';
-//       } else {
-//       console.log('It is falsy', param);
-//       return 'Input is falsy';
-
-//       }        
-//   }
-//  isItTruthy();
-
-//   if (true) {
-
-//   }
-
-//   if (false) {
-
-//   }
-
-//   function determineIfTrue(param) {
-
-//     if (param != false) { 
-//       console.log('Input is True');
-//       return 'Input is True';  
-
-//     } else { 
-//       console.log('Input is False');
-//       return 'Input is False';
-
-//    }
-//   }
-//   determineIfTrue(1);
-
-// console.log("3" == 3);
-
-var person = { 
-    name: "Jim", 
-    age: 21,
-    cars: ["Ferrari", "Geo Metro"]
- }
-var age = "cars"
-console.log(person.age)
-console.log(person[age])
-console.log(person["cars"])
-arrayOfObjects = [
-    {name: "Laurie", age: -1, cars: ["Rogue", "Airstream"]},
-    {name: "Beckham"},
-    {name: "Jim"},
-    {name: "Christian"}
+var people = [
+    {name: "Chris", language: "Typescript", bank: 100000},
+    {name: "Laurie", language: "Javascript", bank: 1000000},
+    {name: "Beckham", language: "Javascript", bank: 500}
 ]
 
-console.log(arrayOfObjects[0].cars[1])
+// takes an index and an amount, and adjusts a person's account by that amount, then returns the new amount.
 
-var siding = ["aluminum", "vinyl"]
-var windows = ["solid", "paned"]
+function adjustBankAccount(inputIndex, adjustment) {
+    if (inputIndex >= people.length) return "Index out of bounds.";
+    if (typeof adjustment != "number") return "Adjustment is not a number.";
 
-var house = {}
+    return people[inputIndex].bank = adjustment + people[inputIndex].bank;
 
-const enumComponents = {
-    siding: 1,
-    windows: 2
-}
 
-function takeAnArray(inputArray, component) {
-    switch (component) {
-        case enumComponents.siding:
-
-        break;
-        case enumComponents.windows:
-
-        break;
-
-        default:
-            console.log("Invalid component given")
-            return -1;
-    }
 
 }
 
-takeAnArray(siding, enumComponents.siding)
+console.log(adjustBankAccount(2, -500));
+
+console.log(adjustBankAccount(3, "million"))
+
+console.log(people[2]);
