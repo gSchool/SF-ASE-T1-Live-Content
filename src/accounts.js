@@ -598,3 +598,79 @@ var accounts = [{"id":1,"first_name":"Leyla","last_name":"Yeowell","credit":6,"b
 {"id":598,"first_name":"Liv","last_name":"Crace","credit":10,"balance":908645,"transactions":[{"merchant":"Wilderman and Sons","price":48.93},{"merchant":"Haley, Murray and Bergstrom","price":77.76},{"merchant":"Dicki-Yundt","price":96.69},{"merchant":"Rice, Renner and Lesch","price":26.18},{"merchant":"Bernier Group","price":55.68},{"merchant":"Monahan, Hermann and Torphy","price":30.86},{"merchant":"Langworth-Schowalter","price":44.02},{"merchant":"Bechtelar, Zemlak and MacGyver","price":14.56},{"merchant":"Daugherty, Lindgren and Cassin","price":44.63},{"merchant":"Grady Group","price":51.22},{"merchant":"Bergnaum-Little","price":61.9},{"merchant":"Hoppe LLC","price":73.44}]},
 {"id":599,"first_name":"Thoma","last_name":"Davenport","credit":6,"balance":434103,"transactions":[{"merchant":"Stehr-O'Hara","price":19.93},{"merchant":"Kuphal LLC","price":69.8}]},
 {"id":600,"first_name":"Stavros","last_name":"Barrass","credit":6,"balance":565552,"transactions":[{"merchant":"Johnson LLC","price":36.13},{"merchant":"Robel, Hackett and Kerluke","price":42.95},{"merchant":"Muller, Ziemann and Bergstrom","price":27.38},{"merchant":"Nader-Towne","price":85.47},{"merchant":"Hilpert, Moen and Dietrich","price":50.78},{"merchant":"Franecki, Cartwright and Murphy","price":84.61}]}]
+
+// Write a function that returns the balance of a given ID
+// Assume the order and values of the id are numerical, non-sparse, unordered, and unique.
+// If the id doesn't exist, return an error message.
+
+function returnBalance(id, inputArray) {
+    let i = 0
+    for (; i < inputArray.length; i++) {
+        const account = inputArray[i];
+        if (id === account.id) {      
+            return account["balance"];
+        } 
+    }
+    return `The provided ID: ${id} could not be found in the accounts, last checked index was ${i}`;
+
+}
+console.log(returnBalance(580, accounts));
+console.log(returnBalance(5800, accounts));
+// console.log(returnBalance(580), [{"id":600,"first_name":"Stavros","last_name":"Barrass","credit":6,"balance":565552,"transactions":[{"merchant":"Johnson LLC","price":36.13},{"merchant":"Robel, Hackett and Kerluke","price":42.95},{"merchant":"Muller, Ziemann and Bergstrom","price":27.38},{"merchant":"Nader-Towne","price":85.47},{"merchant":"Hilpert, Moen and Dietrich","price":50.78},{"merchant":"Franecki, Cartwright and Murphy","price":84.61}]}]);
+
+// Write a function, that accepts a person's ID, and that return the person name, first and last, as well as their available credit line.
+// Their credit line, is 10% per level of credit they have, of their balance.
+// Assume that the order and values of the ids are numerical, but not consistently ordered, but unique.
+
+// function findCreditLine(id, inputArray) {
+//     var output = {
+//         "id": 0,
+//         "first_name": "",
+//         "last_name": "",
+//         "credit_line": 0
+//     }
+    
+//     for (let i = 0; i < inputArray.length; i++) {
+//         const account = inputArray[i];
+//         if (id == account.id) {
+//             let creditLine = ((account.credit * 10) / 100) * account.balance;
+//             output.id = account.id;
+//             output.first_name = account.first_name;
+//             output.last_name = account.last_name;
+//             output.credit_line = creditLine.toFixed(2);
+//             return output;
+//         }
+//     }
+
+//     return `ID: ${id} not found in inputArray`;
+// }
+// console.log(findCreditLine(5555, accounts));
+
+// // Write a function that return the total of all the balances of people with a credit score above a given value.
+
+function totalBalances(inputArray, creditScore) {
+    let total = 0;
+    for (let i = 0; i < inputArray.length; i++) {
+        if (inputArray[i].credit > creditScore) {
+            total = total + inputArray[i].balance;
+        }
+    }
+    return total;
+
+}
+// const output = totalBalances(accounts, 5);
+// console.log(output);
+
+// // Write a function that returns the average number (count) of transactions of all accounts.
+
+
+// function averageNumbers(inputArray) {
+//     let transactionCount = 0;
+//     for (let i = 0; i < inputArray.length; i++) {
+//         const account = inputArray[i];
+//         transactionCount += account.transactions.length
+//     }
+//     return transactionCount / inputArray.length
+// }
+
+// console.log(averageNumbers(accounts))
