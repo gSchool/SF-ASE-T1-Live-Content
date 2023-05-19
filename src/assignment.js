@@ -85,8 +85,9 @@ function priintBackpackContent(backpack) {
     // This is the solution, as written.
     // THIS IS WAY ABOVE TIER 1 ON ACCIDENT!
     for (const key in items) {
-        
-        console.log(`item: ${key} count: ${items[key].length} weight: ${items[key][0].weight * items[key].length}`)
+        const itemCount = items[key].length;
+        const itemWeight = items[key][0].weight;
+        console.log(`item: ${key} count: ${itemCount} weight: ${itemWeight * itemCount}`)
     }
 
     console.log(backpack);
