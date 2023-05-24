@@ -28,5 +28,8 @@ function createTodo(message) {
 }
 
 console.log(createTodo("My Message"));
-
-
+let i = 0;
+do {
+i++
+console.log(i)
+} while (i < 100);
