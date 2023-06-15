@@ -35,3 +35,7 @@ for (let i = 0; i < veggies.length; i++) {
 
     if (veggie2.kind) console.log(veggie2.kind);
 }
+let emptyArray = [];
+let myArray2 = [1, 2, 3]
+emptyArray[myArray2];
+console.log(emptyArray)

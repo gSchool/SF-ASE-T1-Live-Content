@@ -12,3 +12,4 @@ for(;;) {
 function doLessImportantThings() {
     requestedExit = 1;
 }
+
