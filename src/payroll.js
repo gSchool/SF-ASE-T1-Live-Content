@@ -2002,8 +2002,6 @@ const punchClock = [{ "id": "141bb5b6-e4c8-4c91-afff-664b653b49da", "timesheet":
 { "id": "5392897a-c389-4dfc-ae89-9687e89acc41", "timesheet": [{ "hours": 4 }, { "hours": 4 }, { "hours": 4 }, { "hours": 10 }] },
 { "id": "4f935c22-24ca-4a46-976b-d7336c4f1472", "timesheet": [{ "hours": 4 }] }]
 
-
-
 // The above arrays of data are: payRate, payType, people, and punchClock
 // Each array represents an array of information with a correlating ID as GUID
 // payRate contains the rate for someone's pay as: {id: guid, payRate: "$##.##"}
@@ -2016,47 +2014,47 @@ const punchClock = [{ "id": "141bb5b6-e4c8-4c91-afff-664b653b49da", "timesheet":
 // You can presume the arrays are the same length, that IDs have a one to one relationship, but are not sorted.
 // Ensure that your function has no side effects.
 
-function totalHours(arrayForPeople, timeclockArray) {
-    let totalHour = [];
+// function totalHours(arrayForPeople, timeclockArray) {
+//     let totalHour = [];
 
-    let persons = getIDsAndNames(arrayForPeople);
+//     let persons = getIDsAndNames(arrayForPeople);
 
-    let hoursWorked = getIDsAndTotalHours(timeclockArray);
+//     let hoursWorked = getIDsAndTotalHours(timeclockArray);
 
-    for (let m = 0; m < persons.length; m++) {
-        for (let t = 0; t < hoursWorked.length; t++) {
+//     for (let m = 0; m < persons.length; m++) {
+//         for (let t = 0; t < hoursWorked.length; t++) {
 
-            if (persons[m].id === hoursWorked[t].id) {
-                
-                totalHour.push({FullName: persons[m].fullName, HoursWorked: hoursWorked[t].hoursTotal});
-                
-            }
-        }
-    }
+//             if (persons[m].id === hoursWorked[t].id) {
 
-    return totalHour
-}
+//                 totalHour.push({ FullName: persons[m].fullName, HoursWorked: hoursWorked[t].hoursTotal });
 
-console.log(totalHours(people, punchClock))
+//             }
+//         }
+//     }
+
+//     return totalHour
+// }
+
+// console.log(totalHours(people, punchClock))
 
 
-function getIDsAndTotalHours(timeclockArray) {
-    let hoursWorked = [];
-    for (let x = 0; x < timeclockArray.length; x++) {
-        const entry = timeclockArray[x];
+// function getIDsAndTotalHours(timeclockArray) {
+//     let hoursWorked = [];
+//     for (let x = 0; x < timeclockArray.length; x++) {
+//         const entry = timeclockArray[x];
 
-        let hoursTotal = 0;
+//         let hoursTotal = 0;
 
-        for (y = 0; y < entry.timesheet.length; y++) {
-            const _sheet = entry.timesheet;
+//         for (y = 0; y < entry.timesheet.length; y++) {
+//             const _sheet = entry.timesheet;
 
-            hoursTotal = hoursTotal + _sheet[y].hours;
-        }
+//             hoursTotal = hoursTotal + _sheet[y].hours;
+//         }
 
-        hoursWorked.push({ id: entry.id, hoursTotal: hoursTotal });
-    }
-    return hoursWorked;
-}
+//         hoursWorked.push({ id: entry.id, hoursTotal: hoursTotal });
+//     }
+//     return hoursWorked;
+// }
 
 function getIDsAndNames(peopleArray) {
     let persons = [];
@@ -2110,3 +2108,21 @@ console.log(getIDByName("Vyky", "Pardy", people))
 
 
 
+function findEvenHours(punchClockArray) {
+    let result = [];
+
+    for (const punchCard of punchClockArray) {
+        // const punchCard = punchClockArray[i];
+        let hoursWorked = 0;
+        for (const hoursObj of punchCard.timesheet) {
+            hoursWorked += hoursObj.hours;
+        }
+        if (hoursWorked % 2 === 0) {
+            result.push(punchCard.id);
+        }
+    }
+
+    return result;
+}
+var result = findEvenHours(punchClock);
+console.log(result);
