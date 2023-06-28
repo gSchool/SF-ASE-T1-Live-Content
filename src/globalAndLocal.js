@@ -47,11 +47,12 @@ const charOffsets = [
 function createCharacter(name, charClass) {
     if (!name) return "You must provide a name";
     if (!charClass) return "You must provide a class";
+    let player = "Tiffany";
     character.name = name;
     character.classIdentifier = charClass;
     character.health = baseCharacter.health;
     character.mana = baseCharacter.mana;
-    for (const charOffset of charOffsets) {
+    for (let charOffset of charOffsets) { 
         if (charOffset.identifier == charClass) {
             character.className = charOffset.className;
             character.health += charOffset.health;
@@ -65,3 +66,8 @@ function createCharacter(name, charClass) {
 
 createCharacter("Conan", "classWarrior")
 console.log(character);
+
+for (let x = 0; x < charOffsets.length; x++) {
+    let charOffset = charOffsets[x];
+
+}
