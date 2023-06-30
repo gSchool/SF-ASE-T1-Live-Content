@@ -3,7 +3,7 @@ const crusts = [
         identifier: "crustThin",
         displayName: "Thin",
         price: 0
-    }, 
+    },
     {
         identifier: "crustHandTossed",
         displayName: "Hand-Tossed",
@@ -24,6 +24,25 @@ const crusts = [
         displayName: "Mushroom",
         price: 8
     }
+]
+
+const sauces = [
+    {
+        identifier: "sauceSpicyTomato",
+        displayName: "Spicy Tomato",
+        price: 5
+    },
+    {
+        identifier: "sauceTomatoBased",
+        displayName: "Marinara",
+        price: 0
+    },
+    {
+        identifier: "sauceAlfredo",
+        displayName: "Alfredo",
+        price: 27
+    },
+
 ]
 
 const toppings = [
@@ -60,6 +79,15 @@ function printMenu() {
         console.log(`${crust.displayName} ${createDots(dots)} ${crust.price}`);
     }
     console.log("");
+
+    const sauceHeader = `---------- Sauce Options ----------`;
+    console.log(sauceHeader);
+    for (const sauce of sauces) {
+        let dots = sauceHeader.length - sauce.displayName.length - sauce.price.toString().length - 2;
+        console.log(`${sauce.displayName} ${createDots(dots)} ${sauce.price}`);
+    };
+    console.log("");
+
     const toppingHeader = `----------=={ Topping Options }==---------`;
     console.log(toppingHeader);
     for (const topping of toppings) {
@@ -70,3 +98,25 @@ function printMenu() {
 }
 
 printMenu();
+// addTopping, addSauce, addCrust -- Possible entries for the Change. Return an error if you get an unknown change.
+// Only 4 toppings max. return an error message if they try to add another.
+// You can only have 1 sauce, and we replace sauces when we already have one.
+// Same for crust.
+function modifyOrder(existOrder, change, identifier) {
+
+    if (change !== "addTopping" || change !== "addSauce" || change !== "addCrust") {
+        return "Incorrect Input for 'change'. Must be one of addTopping, addSauce, addCrust";
+    }
+
+    if (!identifier) return "Identifier must be defined."
+
+    if (change === "addTopping") {
+        if (existOrder.toppings.length >= 4) return `Cannot add topping, 4 toppings already present.`;
+
+
+    }
+
+    var updatedOrder = existOrder + change;
+
+    // return updatedOrder;
+}
