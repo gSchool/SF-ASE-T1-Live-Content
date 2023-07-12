@@ -13,5 +13,5 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
-* July 10, 2023 - Office Hours - Deep dive into function basics
-* July 7, 2023 - Office Hours - Creating functions to get and cross-reference data
+* Office Hours - July 10, 2023 - Deep dive into function basics
+* Office Hours - July 7, 2023 - Creating functions to get and cross-reference data
