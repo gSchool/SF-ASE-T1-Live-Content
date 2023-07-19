@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Office Hours - July 19, 2023 - Breaking down a complex problem
 * Office Hours - July 17, 2023 - Print movie details function
 * Office Hours - July 14, 2023 - Creating and looping data
 * Workshop 1 - July 13, 2023 - Pizza Parlor
