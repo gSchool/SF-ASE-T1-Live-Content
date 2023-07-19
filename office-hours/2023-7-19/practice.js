@@ -48,6 +48,8 @@ const employees = [
 // store the first and last from the found person in a couple variables
 // print the person's full name from the person object and the paytype from the employee object
 
+// Bonus: create a solution for this that has TWO functions, and one uses the other
+
 
 
 
