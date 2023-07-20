@@ -28,3 +28,4 @@ Here are some extras you can try to add once you get the base code working.
 
 * Avoid repeating the common elements in the report output, such as the horizontal lines or the header
 * See where you can contain common logic in more functions
+* print out reports for ALL vehicles but do not print out two reports for the same vehicle (no repeated reports)
