@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Office Hours - July 24, 2023 - Review Solution from External Problem and Using Functions with Other Functions
 * Office Hours - July 21, 2023 - Building out the solution for 7/19
 * Workshop 2 - July 20, 2023 - Vehicle History Report
 * Office Hours - July 19, 2023 - Breaking down a complex problem
