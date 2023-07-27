@@ -25,4 +25,5 @@ const accidents = [
   {"id":"6b818270-7b8f-4352-84ea-d31773a16ea6","vin":"1HGCP2F37AA685147","date":"7/31/2006","description":"While superheroes were investigating a 'phantom ghost swarm,' my car experienced a 'ghostly encounter dent' with an otherworldly apparition."}
 ];
 
+// How far a car must travel in order to win
 const finishLine = 1000;
