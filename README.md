@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Workshop 3 - July 27, 2023 - Racing Simulator
 * Office Hours - July 26, 2023 - More Chats about Functions - https://replit.com/@RichardKey/HummingDarkredBusinesses#index.js
 * Office Hours - July 24, 2023 - Review Solution from External Problem and Using Functions with Other Functions
 * Office Hours - July 21, 2023 - Building out the solution for 7/19
