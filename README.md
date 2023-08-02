@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Office Hours - August 2, 2023 - Creating data and using it in logic
 * Office Hours - July 31, 2023 - Cross-reference some data, bonus to put the logic in a function
 * Office Hours - July 28, 2023 - Reactor yesterdays workshop with functions, talk about preventing changing arrays while looping them
 * Workshop 3 - July 27, 2023 - Racing Simulator
