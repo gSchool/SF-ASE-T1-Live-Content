@@ -35,9 +35,69 @@ const foodsToThrow = [
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 // The maximum is inclusive and the minimum is inclusive
-// Whole numbers ONLY!
 function randomInt(minimum, maximum) {
   const min = Math.ceil(minimum);
   const max = Math.floor(maximum);
   return Math.floor(Math.random() * (max - min + 1) + min); 
 }
+
+// Maybe try to do this later:
+// need to track the health of all the monsters outside the objects (to prevent modifying the raw data)
+
+// DONE - need to track which monsters are above 0 health 
+// DONE - some way to pick a random monster that is IN the current round (to throw food AT) (good candidate for a function?)
+// DONE - some way to pick a random food
+// DONE - Loop over the active monsters and do their throws
+// After the round finished, check which monsters from the round went below 0 health
+
+// start simulation loop that ends when there is one or none monsters left above 0 health
+// Any monsters that are left after that check, heal them per their constitution stat
+// Do a final check to see if only one (or none) monster is left -- The win condition
+
+// high level: output a "list" of some sort that only has monsters above 0 health
+// specific: output an array of monster objects that are above 0 health
+function getActiveMonsters(listOfMonsters) {
+  const active = [];
+  for(let mon of listOfMonsters) {
+    if(mon.health > 0) {
+      active.push({
+        name: mon.name,
+        health: mon.health,
+        strength: mon.strength,
+        constitution: mon.constitution
+      });
+    }
+  }
+  return active;
+}
+
+// Example of objects being a reference
+// const n = { "name":"richard" };
+// const x = n;
+// x.name = "Shalini";
+// console.log(x, n);
+
+// high level: take in an array of monsters and return one of them at random
+function getRandomMonster(subsetOfMonsters) {
+  return subsetOfMonsters[randomInt(0, subsetOfMonsters.length - 1)];
+}
+
+function getRandomFood() {
+  return foodsToThrow[randomInt(0, foodsToThrow.length - 1)];
+}
+
+const activeMonsters = getActiveMonsters(monsters);
+for(let mon of activeMonsters) {
+  const target = getRandomMonster(activeMonsters);
+  mon.health -= 100;
+  // console.log(`${mon.name} threw ${getRandomFood()} at ${target.name}, causing ${mon.strength} damage!`);
+}
+// activeMonsters = getActiveMonsters();
+console.log(activeMonsters[0]);
+console.log(monsters[0]);
+
+
+// Test for the random monster getter
+// for(let m = 0; m < 30; m++) {
+//   console.log(getRandomMonster(activeMonsters).name);
+// }
