@@ -20,3 +20,15 @@ function flatten(nestedArray) {
 console.log(flatten(numbers));
 console.log(flatten(numbers2));
 console.log(flatten(strings));
+
+function capitalize(word) {
+  return word[0].toUpperCase() + word.substring(1);
+}
+
+const string = "dinosaur";
+console.log(string, capitalize(string));
+const title = "lord of the rings: the two towers";
+console.log(title, title.split(' ').map(capitalize).join(' '));
+
+const simpleNumbers = [1, 2, 3];
+console.log(simpleNumbers, simpleNumbers.map(function(n) { return n > 2; }));
