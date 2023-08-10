@@ -48,11 +48,10 @@ function randomInt(minimum, maximum) {
 // DONE - some way to pick a random monster that is IN the current round (to throw food AT) (good candidate for a function?)
 // DONE - some way to pick a random food
 // DONE - Loop over the active monsters and do their throws
-// After the round finished, check which monsters from the round went below 0 health
-
-// start simulation loop that ends when there is one or none monsters left above 0 health
-// Any monsters that are left after that check, heal them per their constitution stat
-// Do a final check to see if only one (or none) monster is left -- The win condition
+// DONE - After the round finished, check which monsters from the round went below 0 health
+// DONE - Any monsters that are left after that check, heal them per their constitution stat
+// DONE - start simulation loop that ends when there is one or none monsters left above 0 health (or 500 rounds have passed)
+// DONE - Do a final check to see if only one (or none) monster is left -- The win condition
 
 // high level: output a "list" of some sort that only has monsters above 0 health
 // specific: output an array of monster objects that are above 0 health
@@ -66,6 +65,9 @@ function getActiveMonsters(listOfMonsters) {
         strength: mon.strength,
         constitution: mon.constitution
       });
+    } else {
+      console.log(mon.name, "was knocked out!");
+      // print out a message "blah was knocked out!"
     }
   }
   return active;
@@ -86,18 +88,64 @@ function getRandomFood() {
   return foodsToThrow[randomInt(0, foodsToThrow.length - 1)];
 }
 
-const activeMonsters = getActiveMonsters(monsters);
-for(let mon of activeMonsters) {
-  const target = getRandomMonster(activeMonsters);
-  mon.health -= 100;
-  // console.log(`${mon.name} threw ${getRandomFood()} at ${target.name}, causing ${mon.strength} damage!`);
-}
-// activeMonsters = getActiveMonsters();
-console.log(activeMonsters[0]);
-console.log(monsters[0]);
+let activeMonsters = getActiveMonsters(monsters);
 
+for(let r = 1; r <= 500; r++) {
+
+  console.log(`Round ${r}:`);
+  
+  // Throw-Round loop
+  for(let mon of activeMonsters) {
+    const target = getRandomMonster(activeMonsters);
+    target.health -= mon.strength;
+    console.log(`${mon.name} threw ${getRandomFood()} at ${target.name}, causing ${mon.strength} damage!`);
+    // console.log(mon.name + ' threw ' + getRandomFood() + ' at ' + target.name + ', causing ' + mon.strength + ' damage!');
+  }
+
+  activeMonsters = getActiveMonsters(activeMonsters);
+
+  // Recoop Loop
+  for(let mon of activeMonsters) {
+    mon.health += mon.constitution;
+  }
+
+ if(activeMonsters.length <= 1) {
+  break;
+ }
+}
+
+console.log(activeMonsters);
+
+if(!activeMonsters.length) {
+  console.log("No monsters survived the onslaught of food.");
+} else if(activeMonsters.length === 1) {
+ console.log(`${activeMonsters[0].name} is the only monster to survive the food fight.`);
+} else {
+  let strongestIndex = 0;
+  for(let m = 1; m < activeMonsters.length; m++) {
+    if(activeMonsters[m].health > activeMonsters[strongestIndex].health) {
+      strongestIndex = m;
+    }
+  }
+
+  console.log(`Out of the ${activeMonsters.length} monsters left, ${activeMonsters[strongestIndex].name} is the healthiest.`);
+}
+
+// console.log(activeMonsters[0]);
+// console.log(monsters[0]);
 
 // Test for the random monster getter
 // for(let m = 0; m < 30; m++) {
 //   console.log(getRandomMonster(activeMonsters).name);
+// }
+
+// For of!!!!
+// const nums = [9,3,80, -2, "hello!"];
+// for(let i = 0; i < nums.length; i++) {
+//   let n = nums[i];
+//   console.log(i, n);
+// }
+
+// for(let n of nums) {
+//   console.log(n);
 // }
