@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Office Hours - August 11, 2023 - Review of Dino Practice
 * Workshop 5 - August 10, 2023 - Monster Food Fight (Cont.)
 * Office Hours - August 9, 2023 - String Copier and Primitive vs Complex data
 * Office Hours - August 7, 2023 - Arrays vs Objects
