@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Office Hours - August 21, 2023 - Review two challenges
 * Workshop 6 - August 17, 2023 - Salad Detector
 * Office Hours - August 16, 2023 - Order of execution, Function Design
 * Office Hours - August 14, 2023 - Review of Age Filtering and Nested Loops
