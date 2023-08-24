@@ -7,9 +7,11 @@ Your solution should follow these requirements:
 * The location is a letter + number combination, such as "B2"
 * The number in the location starts at 1, not 0
 * The number in the location represents the placement in the array, you will need to account for the numbers starting at 1
+* A check should be made to make sure the location is valid
 * Your logic must verify the money provided is enough to purchase the item at the location
 * The function should return an object that contains the item and the change from the purchase
 * If the given money is not enough, the returned item should be null and the change should be all the money given
+* There should be a message printed if the location was not found
 * There should be a message printed if the money is not enough
 * There should be a message printed about the item purchased, using the return of the function
 
