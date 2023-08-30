@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Office Hours - August 30, 2023 - Finding Vowels and Functions in Functions
 * Office Hours - August 28, 2023 - Practicing with loops
 * Office Hours - August 25, 2023 - Jewelry builder
 * Office Hours - August 23, 2023 - Group prompt with the basics
