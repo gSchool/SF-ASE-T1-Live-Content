@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Workshop 8 - September 7, 2023 - PA Practice
 * Office Hours - September 6, 2023 - Dissecting Functions
 * Workshop 7 - August 31, 2023 - Vending Machine
 * Office Hours - August 30, 2023 - Finding Vowels and Functions in Functions
