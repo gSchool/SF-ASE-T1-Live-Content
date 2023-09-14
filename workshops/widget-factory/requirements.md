@@ -23,3 +23,7 @@ Keep in mind there is not just one solution to this project. Your solution might
 ## Bonus Additions
 
 No bonus objects at this time.
+
+## Possible Solution
+
+https://replit.com/@RichardKey/Widget-Workshop-Solved#index.js
