@@ -18,7 +18,7 @@ Here is an example of a widget object to build:
 }
 ```
 
-Keep in mind there is not just one solution to this project. Your solution might vary from others.
+Keep in mind there is not just one solution to this project. Your solution might vary from others. To get started you can copy the starter provided here, or fork the starter REPL.it: https://replit.com/@RichardKey/Widget-Workshop#index.js
 
 ## Bonus Additions
 
