@@ -1,0 +1,33 @@
+const items = [
+  "Old photographs",
+  "Vintage clothing",
+  "Antique books",
+  "Dusty records",
+  "Broken toys",
+  "Yellowed letters",
+  "Christmas decorations",
+  "Retro electronics",
+  "Faded newspapers",
+  "Family heirlooms",
+  "Board games",
+  "Seasonal clothing",
+  "Sports memorabilia",
+  "Vintage magazines",
+  "Quilts and blankets",
+  "Collectible figurines",
+  "Aged musical instruments",
+  "Rusted tools",
+  "Vintage jewelry",
+  "Tattered comic books",
+  "Historical documents",
+  "Costume masks",
+  "wedding dress",
+  "Fragile porcelain dolls",
+  "Rusted bicycles",
+  "Childhood artwork",
+  "Tarnished silverware",
+  "Vintage postcards",
+  "Dusty board games"
+];
+
+const storageUnit = [];

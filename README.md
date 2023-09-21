@@ -11,9 +11,12 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 ## Contents
 
-> Some of the earlier sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
+> The earliest sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
-* Office Hours - September 15, 2023 - 
+* Workshop 10 - September 21, 2023 - Storage Locker
+* Office Hours - September 20, 2023 - string combiner (Group)
+* Office Hours - September 18, 2023 - greater than checker (Group)
+* Office Hours - September 15, 2023 - outfit description generator (Group)
 * Workshop 9 - September 14, 2023 - Widget Factory
 * Office Hours - September 13, 2023 - Segment a string (Group)
 * Office Hours - September 11, 2023 - Filter numbers and sum them
