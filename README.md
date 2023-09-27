@@ -13,7 +13,8 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > The earliest sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
-* Office Hours - September 20, 2023 - Review of filling a vehicle challenge solution
+* Office Hours - September 27, 2023 - isOddWithoutModulo
+* Office Hours - September 22, 2023 - Review of filling a vehicle challenge solution
 * Office Hours - September 20, 2023 - filling a vehicle (Group)
 * Workshop 10 - September 21, 2023 - Storage Locker
 * Office Hours - September 20, 2023 - string combiner (Group)
