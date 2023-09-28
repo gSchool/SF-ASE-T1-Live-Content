@@ -7,7 +7,7 @@ Your solution should follow these requirements:
 * For each yard the runner gains, there are attempted tackles
 * The number of tackle attempts (per yard) and the chance to get tackled by each attempt are as follows:
     * number of tackle attempts: yards / 20 (minimum 1, always floored)
-    * tackle success rate: 
+    * tackle success rate:
       * 50% when between 1 and 50 yards
       * 20% between 51 and 75
       * 10% between 76 and 99
