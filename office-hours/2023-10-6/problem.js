@@ -1,23 +1,23 @@
 // write a function that builds an array of objects, based on an input array of numbers
 // it will map each number in the array to an object in the new array
 // this function will have one parameter: an array of numbers
-function buildArrayofObjects(input){
+function buildArrayofObjects(input, mod){
     let newArray = [];
 
     for (let i = 0; i < input.length; i ++) {
-        let numObject = {
-            divide: (input[i] / 2),
-            multiply: (input[i] * 2),
-            add: (input[i] + 2),
-            subtract: (input[i] - 2),
-        }
-        newArray.push(numObject);
+        let obj = {
+            divide: (input[i] / mod),
+            multiply: (input[i] * mod),
+            add: (input[i] + mod),
+            subtract: (input[i] - mod),
+        };
+        newArray.push(obj)
     }
     //console.log(newArray);
     return newArray;
 }
 const nums1 = [2,10]
-const res1 = buildArrayofObjects(nums1)
+const res1 = buildArrayofObjects(nums1, 5)
 console.log("nums1:",nums1)
 console.log("res1",res1)
 
