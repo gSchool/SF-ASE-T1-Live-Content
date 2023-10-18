@@ -13,6 +13,8 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > The earliest sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Office Hours - October 16/18, 2023 - Scramble a string (group)
+* Office Hours - October 6, 2023 -  Build an object (group)
 * Office Hours - October 4, 2023 - Capitalize each word in a sentence (group)
 * Office Hours - September 29, 2023 - Search a string with split
 * Workshop 11 - September 28, 2023 - Running Back Runner
