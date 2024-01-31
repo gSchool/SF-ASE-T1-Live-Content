@@ -13,6 +13,7 @@ You can open this repository in an in-browser editor by simply press `.`.
 
 > The earliest sessions are not listed here because details on these sessions have been lost. You are still welcome to look through the content - we just don't have details on the topics that were discussed in those sessions.
 
+* Office Hours - January 31st, 2024 - Fit It (Round 2)
 * Office Hours - January 3rd, 2024 - Fit It (Round 1)
 * Office Hours - November 29, 2023 - How to think about functions
 * Office Hours - November 15, 2023 - Pike-case Capitalization Function (group)
