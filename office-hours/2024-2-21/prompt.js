@@ -1,24 +1,31 @@
-// Write a function that takes a string as an argument and returns 
+// Write a function that takes a string as an  and returns 
 function longestContiguousString(stringInput){
-    
+     // change this to an objectargument
     if(stringInput === "") {
       return "string is empty."
     }
     // a number representing the longest contiguous string of identical 
-let letters =  stringInput.split("");
-// iterate over letters to check contiguous letters
-for(let i = 0; i < letters.length; i++){
-    var number = 1;
-// create temporary variable to store letters of current index
-var currentLetters = letters[i];
-//compare if the current letter is 
-if(currentLetters === letters[i+1]){
-    //add the instace to number variable
-    number += 1;
-    
-}
-} 
-    return number;
+    let letters =  stringInput.split("");
+    // iterate over letters to check contiguous letters
+    var maxLetter = 1;
+    var currentLetterCount = 1;
+    for(let i = 0; i < letters.length; i++){
+        // create temporary variable to store letters of current index
+        var letter = letters[i];
+        var NextLetter = letters[i+1]; 
+        //compare if the current letter is 
+        if(letter === NextLetter){
+            currentLetterCount++; // two equal letters.  so we are in the middle of a set of consecutive letters.
+        } else {
+            if(currentLetterCount > maxLetter) {
+                maxLetter = currentLetterCount;
+            }
+            currentLetterCount = 1;
+            // we are not in the middle of a set of consecutive letters.
+        }
+        // console.log(i, letter, NextLetter, maxLetter);
+    }
+    return maxLetter;
 }
 console.log(longestContiguousString("looong"));
 // should return 3
