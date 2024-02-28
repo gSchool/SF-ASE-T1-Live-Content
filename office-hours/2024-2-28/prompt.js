@@ -5,13 +5,14 @@ function pluck(array, string){
     let newArray=[];
     for (let i = 0; i < array.length; i++){
         let obj = array[i];
-        for(let key in obj){
-            if (key === string){
-                newArray.push(obj[key])
-            }else {
-                newArray.push(obj[key])
-            }
-        }
+        newArray.push(obj[string])
+        // for(let key in obj){
+        //     if (key === string){
+        //         newArray.push(obj[key])
+        //     }else {
+        //         newArray.push(obj[key])
+        //     }
+        // }
     }
     //  The function should return a new array containing the values
     return newArray;
@@ -38,4 +39,42 @@ let inputFour = pluck([{color: 'red', size: 'small'}, {color: 'blue', size: 'med
 // Input: [{color: 'red', size: 'small'}, {color: 'blue', size: 'medium'}, {color: 'yellow', size: 'large'}], 'color'
 // Output: ['red', 'blue', 'yellow']
 
-console.log(inputFour);
+// console.log(input);
+// console.log(inputTwo);
+// console.log(inputThree);
+// console.log(inputFour);
+
+
+/** =============================================== **/
+
+// write a function called “zipArray”.  This function takes two arrays as 
+// arguments, and returns a new array with all the items from both 
+// input arrays, in alternating order.  For example:
+function zipArray(arr1, arr2){
+//  Input: [1,2,3], [‘a’, ‘b’, ‘c’]
+//  Output: [1, ‘a’, 2, ‘b’, 3, ‘c’]
+// manually look at first arr to get 1 and second array get the another one. 
+var newArray = [];
+let shortestArray = Math.min(arr1.length, arr2.length)
+for(var i = 0; i < shortestArray; i++){
+    newArray.push(arr1[i]);
+    newArray.push(arr2[i]);
+console.log(i,arr1[i],arr2[i]);    
+}
+console.log(i);
+if(arr1.length > arr2.length){
+    newArray = newArray.concat(arr1.slice(i));
+} else if(arr1.length < arr2.length){
+    newArray = newArray.concat(arr2.slice(i));
+}
+
+console.log(newArray);
+// If arrays with different lengths are passed, the items in the longer 
+// array should be appended as-is to the end of the result array.  For
+// example:
+return newArray
+}
+
+var Input = zipArray([1,2,3,4,5], ['a', 'b', 'c']);
+console.log(Input);
+// Output:  [1, ‘a’, 2, ‘b’, 3, ‘c’, 4, 5]
